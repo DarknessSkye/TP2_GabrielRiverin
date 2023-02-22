@@ -16,7 +16,7 @@ package formes;
  * @version V1.1
  */
 
-public abstract class Formes implements Comparable<Formes> {
+public abstract class Forme implements Comparable<Forme> {
 
     /**
      * Nom de la forme
@@ -47,7 +47,7 @@ public abstract class Formes implements Comparable<Formes> {
      * Constructeur de forme
      * @param nom
      */
-    public Formes(String nom) {
+    public Forme(String nom) {
         this.nom = nom;
     }
 
@@ -99,7 +99,7 @@ public abstract class Formes implements Comparable<Formes> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Formes formes = (Formes) o;
+        Forme formes = (Forme) o;
         return calculerSurface() == formes.calculerSurface() && couleur == formes.couleur && nom == formes.nom;
     }
 
@@ -122,7 +122,7 @@ public abstract class Formes implements Comparable<Formes> {
      * @return
      */
     @Override
-    public int compareTo(Formes o) {
+    public int compareTo(Forme o) {
         if (this.nom.equals(o.nom)) {
             return this.couleur.compareTo(o.couleur);
         }

@@ -11,7 +11,7 @@ package formes;
 
 import exceptions.FormeException;
 
-public class Cercle extends Formes {
+public class Cercle extends Forme {
 
     private int rayon;
 

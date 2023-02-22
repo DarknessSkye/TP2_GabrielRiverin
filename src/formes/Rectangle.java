@@ -17,7 +17,7 @@ import exceptions.FormeException;
  * @version V1.1
  */
 
-public class Rectangle extends Formes {
+public class Rectangle extends Forme {
 
     /**
      * Largeur du rectangle

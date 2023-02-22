@@ -19,7 +19,7 @@ import java.util.Arrays;
  * @author Riverin Gabriel
  * @version V1.1
  */
-public class Triangle extends Formes {
+public class Triangle extends Forme {
     /**
      * Côté A du triangle
      */
