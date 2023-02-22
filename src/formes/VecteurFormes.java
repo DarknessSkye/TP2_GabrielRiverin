@@ -10,5 +10,7 @@ Lien GIT Hub : https://github.com/DarknessSkye/TP2_GabrielRiverin/commits/main
 package formes;
 
 public class VecteurFormes {
-    
+
+    public VecteurFormes() {
+    }
 }
