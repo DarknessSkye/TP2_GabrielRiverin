@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"formes","l":"Cercle"},{"p":"formes","l":"Couleur"},{"p":"exceptions","l":"FormeException"},{"p":"formes","l":"Formes"},{"p":"formes","l":"Rectangle"},{"p":"formes","l":"Triangle"},{"p":"formes","l":"TypeTriangle"}];updateSearchResults();
