@@ -33,19 +33,11 @@ public class VecteurFormes {
             int nbAleatoire = getNombreAleatoireEntreBorne(0, i);
 
             if (i != nbAleatoire) {
-                swap(nbAleatoire, i);
+                permuter(nbAleatoire, i);
             }
         }
     }
 
-    private void swap(int a, int b) {
-        Forme f1 = vecteurFormes.get(b);
-        Forme f2 = vecteurFormes.get(a);
-
-        Forme formeTemporaire = vecteurFormes.get(b);
-        f1 = f2;
-        f2 = formeTemporaire;
-    }
 
     public static int getNombreAleatoireEntreBorne(int min, int max) {
         if (min >= max) {
@@ -56,7 +48,12 @@ public class VecteurFormes {
     }
 
     private void permuter(int a, int b) {
+        Forme f1 = vecteurFormes.get(b);
+        Forme f2 = vecteurFormes.get(a);
 
+        Forme formeTemporaire = vecteurFormes.get(b);
+        f1 = f2;
+        f2 = formeTemporaire;
     }
 
     public void remplir(int nbFormesVoulues) {
@@ -69,7 +66,10 @@ public class VecteurFormes {
             for (int i = 0; i < nbFormesVoulues; i++) {
                 for (int j = 0; j < tabCouleur.length; j++) {
                     if (comteur == 0) {
-
+                        f = new Cercle(3);
+                        f.setCouleur(tabCouleur[j]);
+                        vecteurFormes.add(f);
+                        comteur++;
                     } else if (comteur == 1) {
                         f = new Rectangle(3, 3);
                         f.setCouleur(tabCouleur[j]);
