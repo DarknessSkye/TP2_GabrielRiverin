@@ -16,25 +16,67 @@ public class VecteurFormes {
     private ArrayList<Forme> vecteurFormes;
 
     public VecteurFormes() {
+        this.vecteurFormes = new ArrayList<Forme>();
     }
 
-    private void addForme(Forme formes, Couleur couleur){
+    private void addForme(Forme formes, Couleur couleur) {
 
     }
 
-    public ArrayList<Forme> getVecteur(){
+    public ArrayList<Forme> getVecteur() {
         return vecteurFormes;
     }
 
-    public void melanger(){
+    public void melanger() {
+        
+    }
+
+    private void permuter(int a, int b) {
 
     }
 
-    private void permuter(int a, int b){
+    public void remplir(int nbFormesVoulues) {
+        Couleur[] tabCouleur = new Couleur[]{Couleur.ROUGE, Couleur.VERT, Couleur.BLEU, Couleur.JAUNE, Couleur.NOIR, Couleur.ORANGE};
+
+        Forme f;
+        int comteur = 0;
+
+        if (nbFormesVoulues > 0) {
+            for (int i = 0; i < nbFormesVoulues; i++) {
+                for (int j = 0; j < tabCouleur.length; j++) {
+                    if (comteur == 0) {
+
+                    } else if (comteur == 1) {
+                        f = new Rectangle(3, 3);
+                        f.setCouleur(tabCouleur[j]);
+                        vecteurFormes.add(f);
+                        comteur++;
+                    } else {
+                        f = new Triangle(3, 3, 3);
+                        f.setCouleur(tabCouleur[j]);
+                        vecteurFormes.add(f);
+                        comteur = 0;
+                    }
+                }
+            }
+        } else {
+            throw new ArrayIndexOutOfBoundsException("Le nombre de forme voulue doit être positif");
+        }
 
     }
 
-    public void remplir(int a){
+    @Override
+    public String toString() {
+        return "VecteurFormes{" +
+                "vecteurFormes=" + vecteurFormes +
+                '}';
+    }
 
+    public void trier() {
+
+    }
+
+    private boolean validerNbrFormes(int a) {
+        return true;
     }
 }
