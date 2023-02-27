@@ -21,7 +21,7 @@ public class VecteurFormes {
     }
 
     private void addForme(Forme formes, Couleur couleur) {
-
+        
     }
 
     public ArrayList<Forme> getVecteur() {
@@ -67,18 +67,15 @@ public class VecteurFormes {
                 for (int j = 0; j < tabCouleur.length; j++) {
                     if (comteur == 0) {
                         f = new Cercle(3);
-                        f.setCouleur(tabCouleur[j]);
-                        vecteurFormes.add(f);
+                        addForme(f, tabCouleur[j]);
                         comteur++;
                     } else if (comteur == 1) {
                         f = new Rectangle(3, 3);
-                        f.setCouleur(tabCouleur[j]);
-                        vecteurFormes.add(f);
+                        addForme(f, tabCouleur[j]);
                         comteur++;
                     } else {
                         f = new Triangle(3, 3, 3);
-                        f.setCouleur(tabCouleur[j]);
-                        vecteurFormes.add(f);
+                        addForme(f, tabCouleur[j]);
                         comteur = 0;
                     }
                 }
